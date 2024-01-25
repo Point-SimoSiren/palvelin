@@ -1,0 +1,10 @@
+#footer {
+    background-color: lightskyblue;
+    position: fixed;
+    min-height: 200px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}

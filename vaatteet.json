@@ -1,0 +1,6 @@
+
+[{"id":1, "kategoria":"paidat", "nimike":"Nike-sportextreme",
+"hinta": 59.90}, {"id":2, "kategoria":"housut", "nimike":"Force",
+"hinta": 19.90}, {"id":3, "kategoria":"takit", "nimike":"PilotX",
+"hinta": 89.90}, {"id":4, "kategoria":"sukat", "nimike":"Catepillar",
+"hinta": 5.95}]
