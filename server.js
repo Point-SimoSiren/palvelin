@@ -1,7 +1,28 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const vaatteet = require('./vaatteet.json')
 const path = require('path')
+const fs = require('fs').promises
+
+app.use(cors())
+
+ // Pinkoodin lukeminen txt tiedostosta pelvelimelta ja lähettäminen selaimelle   
+ app.get('/api/login', async (req, res) => {
+    try {
+        // Tiedoston lukeminen
+        const savedPin = await fs.readFile('./pin.txt', 'utf-8')
+        
+        // Luetun sisällön lähettäminen clientille
+        res.send(savedPin)
+    } 
+    catch {
+        res.status(500).send('Internal Server Error')
+    }
+})
+
+
+
 
 // Tehdään polkumääritys frontend kansioon 
 const fronttipolku = path.join(__dirname, './frontend')
@@ -12,7 +33,7 @@ app.use(express.static(fronttipolku))
 
 // Vaatedatan lähettäminen
 app.get('/api/vaatteet', (req, res) => {
-        res.json(vaatteet)
+        res.status(200).json(vaatteet)
         }
     )
 

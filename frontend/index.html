@@ -11,6 +11,17 @@
     <center>
         <marquee><h1>Vaatekauppa</h1></marquee>
 
+        <input id="pin" type="password" maxlength="10" placeholder="syötä pinkoodi" />
+        <button id="login" onclick="login()">Login</button>
+
+        <button id="logout" style="visibility: hidden;" onclick="logout()">Logout</button>
+
+        <br><br>
+        <button id="tuotenappi" disabled onclick="getVaatteet()">Tuotteet</button>
+
+        <div id="root"></div>
+
+
        <div id="footer"></div> 
 
     </center>
